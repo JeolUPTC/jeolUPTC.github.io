@@ -45,7 +45,7 @@ abs(-pi)
 
 
 - Número factorial: número entero positivo $n$ como $n! = n . (n-1) ... 2 . 1$
-- Coeficiente binomial: $ \binom{n}{m} = \frac{n!}{m!(n-m)!}$
+- Coeficiente binomial: $\binom{n}{m} = \frac{n!}{m!(n-m)!}$
 
 ```{r}
 factorial(16)
