@@ -1,0 +1,87 @@
+---
+title: "Conceptos básicos"
+author: "jeol"
+date: "2022-08-15"
+output: html_document
+---
+
+## Algunos conceptos de R {.tabset}
+
+Para trabajar con R es necesario conocer un poco del vocabulario usado en en este lenguaje de programación. Los siguientes son conceptos básicos que se usaran en esta capacitación..
+
+### Tipos de Datos
+
+En R los datos pueden ser de diferentes tipos. Cada tipo tiene características particulares que lo distinguen de los demás. Entre otras cosas algunas operaciones sólo pueden realizarse con tipos de datos específicos.
+
+*Datos más comunes*
+Los tipos de datos de uso más común en R son los siguientes:
+
+| Tipo            | Ejemplo     | Type                                                |
+|-----------------|-------------|-----------------------------------------------------|
+| Entero          | 1           | integer                                             |
+| Numérico        | 1.3         | numeric, double o float                             |
+| Cadena de Texto | "cadena"    | character                                           |
+| Factor          | uno         | factor (dato numerico representado por una etiqueta)|
+| Lógico          | TRUE        | logical                                             | 
+
+Algunas constantes de usos frecuente
+
+| Código          | Significado                       |
+|-----------------|-----------------------------------|
+| pi              | $\pi$                             |
+| Inf             | $\infty$                          |
+| NaN             | Indeterminación (not a Number)    |
+| NA              | Valor desconocido (Not Available) |
+
+Además de estos tipos, en R también contamos con datos complejos numéricos complejos (con una parte real y una imaginaria), raw (bytes), fechas y raster, entre otros. Estos tipos tiene aplicaciones muy específicas, por ejemplo, los datos de tipo fecha son ampliamente usados en economía, para análisis de series de tiempo.
+
+
+Verificar el tipo de dato
+
+En ocasiones, tenemos datos pero no sabemos de simple vistazo de qué tipo son. Para esto casos, podemos usar la función class() para determinar el tipo de un dato. Esto es de utilidad para asegurarnos que las operaciones que deseamos realizar tendrán los datos apropiados para llevarse a cabo con éxito.
+
+```{r}
+class(3)
+
+```
+
+### Coerción explícita (is)
+
+También podemos verificar si un dato es de un tipo específico con la familia de funciones is().
+
+- is.integer()
+- is.numeric()
+- is.character()
+- is.factor()
+- is.logical()
+- is.null()
+
+Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE.
+
+```{r}
+class(3)
+is.numeric(5)
+
+```
+
+### Coerción explícita (as)
+
+Se puede hacer coerciones explícitas usando la familia de funciones as().
+
+- as.integer()
+- as.numeric()
+- as.character()
+- as.factor()
+- as.logical()
+- as.null()
+
+Por ejemplo:
+
+```{r}
+as.character(5)
+
+as.numeric("cinco")
+
+```
+
+En ocasiones, tenemos datos pero no sabemos de simple vistazo de qué tipo son. Para esto casos, podemos usar la función class() para determinar el tipo de un dato. Esto es de utilidad para asegurarnos que las operaciones que deseamos realizar tendrán los datos apropiados para llevarse a cabo con éxito.
