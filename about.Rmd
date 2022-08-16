@@ -1,7 +1,8 @@
 ---
 title: "Acerca de ..."
 ---
+![Logo de R](./img/acre_blancopng.png)
 
-Acerca de ...
-
-
+# Facultad de Ingeniería
+# Escuela de Ingeniería de Sistemas y Computación
+# 2022

@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="jeol" />
 
+<meta name="date" content="2022-08-15" />
 
-<title>Acerca de …</title>
+<title>Proceso de instalación</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -279,24 +281,111 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Acerca de …</h1>
+<h1 class="title toc-ignore">Proceso de instalación</h1>
+<h4 class="author">jeol</h4>
+<h4 class="date">2022-08-15</h4>
 
 </div>
 
 
-<div class="figure">
-<img src="img/acre_blancopng.png" alt="" />
-<p class="caption">Logo de R</p>
+<div id="instalación-de-r-y-r-studio" class="section level2">
+<h2>Instalación de R y R-Studio</h2>
+<p>A continuación se presenta un resumen de como instalar R y
+RStudio.</p>
 </div>
-<div id="facultad-de-ingeniería" class="section level1">
-<h1>Facultad de Ingeniería</h1>
+<div id="instalación-de-r" class="section level1">
+<h1>Instalación de R</h1>
+<p>La manera de instalar R cambia dependiendo del sistema operativo
+utilices pero todas tienen en común el uso de CRAN.</p>
+<p>CRAN es el The Comprehensive R Archive Network, una red en la que se
+archivan todas las versiones de R base, así como todos los paquetes para
+R que han pasado por un proceso de revisión riguroso, realizado por el
+CRAN Team, que se encarga de asegurar su correcto funcionamiento.</p>
+<p>CRAN es una red porque existen copias de su contenido en diferentes
+servidores alrededor del mundo, los cuales se actualizan diariamente. De
+este modo, no importa de qué servidor de CRAN descargues R o algún
+paquete, lo que vas a obtener será la versión más reciente de ese
+recurso, que es igual a la disponible en todos los demás servidores.</p>
+<p>Como se abordará más adelante, cuando se descarga un paquete de R, se
+está haciendo desde CRAN, a menos que indiquemos otra cosa.</p>
+<p>El sitio oficial de CRAN, en el que encontrarás más información sobre
+este repositorio es el siguiente:</p>
+<ul>
+<li><a href="https://cran.r-project.org/"
+class="uri">https://cran.r-project.org/</a></li>
+<li><a href="https://cran.r-project.org/bin/windows/base/"
+class="uri">https://cran.r-project.org/bin/windows/base/</a> (para
+windows)</li>
+<li><a href="https://cran.r-project.org/bin/macosx/"
+class="uri">https://cran.r-project.org/bin/macosx/</a> (para mac)</li>
+<li><a href="https://cran.r-project.org/bin/linux/"
+class="uri">https://cran.r-project.org/bin/linux/</a> (para linux)</li>
+</ul>
 </div>
-<div id="escuela-de-ingeniería-de-sistemas-y-computación"
-class="section level1">
-<h1>Escuela de Ingeniería de Sistemas y Computación</h1>
+<div id="r-studio" class="section level1">
+<h1>R-Studio</h1>
+<p>Para instalar RStudio, es necesario con descargar y ejecutar alguno
+de los instaladores disponibles en su sitio oficial. Están disponibles
+versiones para Windows, OSX y Linux.</p>
+<ul>
+<li><a href="https://www.rstudio.com/products/rstudio/download/"
+class="uri">https://www.rstudio.com/products/rstudio/download/</a></li>
+</ul>
+<p>Se debe instalar preliminarmente R en el equipo, para que RStudio lo
+detecte automáticamente y poderlo utilizarlo desde este entorno.</p>
+<p>Para complementar las instlación y Si se tiene problemas con la
+generación del PDF usando un Rmd, pruebe ejecutar antes la actualización
+de MarkDown a la versión compatible con las librerías de R:</p>
+<ul>
+<li>install.packages(“devtools”)</li>
+<li>library(devtools)</li>
+<li>install_version(“rmarkdown”, version = 1.8)</li>
+</ul>
+<p>También es recomendable instalar tinytex -
+install.packages(“tinytex”) - tinytex::install_tinytex()</p>
 </div>
-<div id="section" class="section level1">
-<h1>2022</h1>
+<div id="colab" class="section level1">
+<h1>Colab</h1>
+<p>Aunque Colab se usa principalmente para codificar en Python, también
+se puede usar para R ( #Rstats ). Hay dos formas de ejecutar R en Colab
+- La primera forma es usar el paquete rpy2 en el tiempo de ejecución de
+Python. Este método le permite ejecutar la sintaxis de R y Python
+juntas. - La segunda forma es iniciar el cuaderno en el tiempo de
+ejecución de R con: - <em><a href="https://colab.to/r"
+class="uri">https://colab.to/r</a></em></p>
+</div>
+<div id="paquetes" class="section level1">
+<h1>Paquetes</h1>
+<p>Son librerías con funciones y datos que no necesariamente vienen
+instaladas por defecto.</p>
+<p>Para instalar un paquete existen varias formas, un a de ellas es a
+través de las sentencias:</p>
+<ul>
+<li>install.package(“nombre_paquete”, dep = TRUE), esto instala o
+actualiza un paquete, (dep de dependencias)</li>
+<li>library(nombre_paquete), permite cargar un paquete ya instalado</li>
+</ul>
+<p>Ejemplo:</p>
+<ul>
+<li>install.package(“tidyverse”, dep = TRUE)</li>
+<li>library(tidyverse)</li>
+<li>Sitio documentación del paquete, <a
+href="https://www.tidyverse.org/"
+class="uri">https://www.tidyverse.org/</a></li>
+</ul>
+</div>
+<div id="referencias" class="section level1">
+<h1>Referencias</h1>
+<ul>
+<li>Institute for Statistics and Mathematics of WU
+(Wirtschaftsuniversität Wien). The Comprehensive R Archive Network.
+Recuperado en agosto de 2022 de: <a href="https://cran.r-project.org/"
+class="uri">https://cran.r-project.org/</a></li>
+<li>Adityawarman Fidocia Wilma. Cómo usar R en Google Colab. Recuperado
+en agosto de 2022 de: <a
+href="https://towardsdatascience.com/how-to-use-r-in-google-colab-b6e02d736497"
+class="uri">https://towardsdatascience.com/how-to-use-r-in-google-colab-b6e02d736497</a></li>
+</ul>
 </div>
 
 <p>Copyright &copy; 2022 Uptc, Escuela de Ingeniería de Sistemas y Computación.</p>

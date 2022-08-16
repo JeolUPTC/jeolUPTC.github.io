@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="jeol" />
 
+<meta name="date" content="2022-08-16" />
 
-<title>Acerca de …</title>
+<title>Variables y Funciones</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -279,25 +281,27 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Acerca de …</h1>
+<h1 class="title toc-ignore">Variables y Funciones</h1>
+<h4 class="author">jeol</h4>
+<h4 class="date">2022-08-16</h4>
 
 </div>
 
 
-<div class="figure">
-<img src="img/acre_blancopng.png" alt="" />
-<p class="caption">Logo de R</p>
-</div>
-<div id="facultad-de-ingeniería" class="section level1">
-<h1>Facultad de Ingeniería</h1>
-</div>
-<div id="escuela-de-ingeniería-de-sistemas-y-computación"
-class="section level1">
-<h1>Escuela de Ingeniería de Sistemas y Computación</h1>
-</div>
-<div id="section" class="section level1">
-<h1>2022</h1>
-</div>
+<ul>
+<li>nombre_variable = valor: define una variable con dicho valor</li>
+<li>nombre_funcion = function(variable) {funcion} : define la
+función</li>
+</ul>
+<p>Función para devolver un numero multiplicado por 2</p>
+<pre class="r"><code>variable_numero &lt;- 4
+multiplica_por_dos &lt;- function(x) {2*x}
+multiplica_por_dos(variable_numero)</code></pre>
+<pre><code>## [1] 8</code></pre>
+<p>Función para elevar un numero al cuadrado</p>
+<pre class="r"><code>eleva_al_cuadrado &lt;- function(x) {x^2}
+eleva_al_cuadrado(variable_numero)</code></pre>
+<pre><code>## [1] 16</code></pre>
 
 <p>Copyright &copy; 2022 Uptc, Escuela de Ingeniería de Sistemas y Computación.</p>
 <p>Capacitación libre para - <b>FVTVRVM AEDIFICAMVS</b></p>

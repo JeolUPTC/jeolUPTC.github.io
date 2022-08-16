@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="jeol" />
 
+<meta name="date" content="2022-08-15" />
 
-<title>Acerca de …</title>
+<title>Operadores</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -279,24 +281,242 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Acerca de …</h1>
+<h1 class="title toc-ignore">Operadores</h1>
+<h4 class="author">jeol</h4>
+<h4 class="date">2022-08-15</h4>
 
 </div>
 
 
-<div class="figure">
-<img src="img/acre_blancopng.png" alt="" />
-<p class="caption">Logo de R</p>
+<p>Los operadores son los símbolos que le indican a R que debe realizar
+una tarea. Combinando datos y operadores es que logramos que R haga su
+trabajo.</p>
+<div id="tipos-de-operadores" class="section level2 tabset">
+<h2 class="tabset">Tipos de Operadores</h2>
+<p>Existen operadores específicos para cada tipo de tarea. Los tipos de
+operadores principales son los siguientes:</p>
+<ul>
+<li>Aritméticos</li>
+<li>Relacionales</li>
+<li>Lógicos</li>
+<li>De asignación</li>
+</ul>
+<div id="aritméticos" class="section level3">
+<h3>Aritméticos</h3>
+<p>En R tenemos los siguientes operadores aritméticos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Operación</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Suma</td>
+<td>6 + 8</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Resta</td>
+<td>6 - 1</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Multiplicación</td>
+<td>5 * 4</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>División</td>
+<td>5 / 3</td>
+<td>1.666667</td>
+</tr>
+<tr class="odd">
+<td>^</td>
+<td>Potencia</td>
+<td>2 ^ 3</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>%%</td>
+<td>Resto de División Entera</td>
+<td>5 %% 3</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>%/%</td>
+<td>Cociente Entero</td>
+<td>5 %/% 3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Es posible realizar operaciones aritméticas con datos de tipo entero
+y numérico. El uso de paréntesis permite definir prioridad de
+operaciones.</p>
+<p>Ejemplo:</p>
+<pre class="r"><code>6 + 8</code></pre>
+<pre><code>## [1] 14</code></pre>
+<pre class="r"><code>6 - 1</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>5 * 4</code></pre>
+<pre><code>## [1] 20</code></pre>
+<pre class="r"><code>5 / 3</code></pre>
+<pre><code>## [1] 1.666667</code></pre>
+<pre class="r"><code>2^3</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>5 %% 3</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>5 %/% 3</code></pre>
+<pre><code>## [1] 1</code></pre>
 </div>
-<div id="facultad-de-ingeniería" class="section level1">
-<h1>Facultad de Ingeniería</h1>
+<div id="relacionales" class="section level3">
+<h3>Relacionales</h3>
+<p>Se usan para realizar comparaciones:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Operación</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;</td>
+<td>Mayor a</td>
+<td>6 &lt; 8</td>
+</tr>
+<tr class="even">
+<td>&lt;=</td>
+<td>Menor o igual a</td>
+<td>6 &lt;= 1</td>
+</tr>
+<tr class="odd">
+<td>&gt;</td>
+<td>Mayor a</td>
+<td>5 &gt; 4</td>
+</tr>
+<tr class="even">
+<td>&gt;=</td>
+<td>Mayor igual a</td>
+<td>5 &gt;= 3</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>Exactamente igual a</td>
+<td>2 == 3</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Diferente a</td>
+<td>5 != 3</td>
+</tr>
+</tbody>
+</table>
+<p>La comparación de cadenas tiene un comportamiento diferente que se
+abordará más adelante.</p>
+<p>Ejemplo:</p>
+<pre class="r"><code>6 &lt; 8</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>6 &lt;= 1</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>5 &gt; 4</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>5 &gt;= 3</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>2 == 3</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>5 != 3</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="escuela-de-ingeniería-de-sistemas-y-computación"
-class="section level1">
-<h1>Escuela de Ingeniería de Sistemas y Computación</h1>
+<div id="lógicos" class="section level3">
+<h3>Lógicos</h3>
+<p>Los operadores lógicos son usados para operaciones de álgebra
+Booleana, es decir, para describir relaciones lógicas, expresadas como
+verdadero (TRUE) o falso (FALSO).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>|</td>
+<td>Or</td>
+<td>TRUE | FALSE</td>
+<td>TRUE</td>
+</tr>
+<tr class="even">
+<td>&amp;</td>
+<td>And</td>
+<td>TRUE &amp; FALSE</td>
+<td>FALSE</td>
+</tr>
+<tr class="odd">
+<td>!</td>
+<td>Not</td>
+<td>!FALSE</td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p>Estos operadores se pueden combinar para expresar relaciones
+complejas.</p>
+<p>Ejemplo:</p>
+<pre class="r"><code>(6 &lt; 8) | (13 &gt; 7)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>(6 &lt; 8) &amp; (13 &gt; 7)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>!(13 &gt; 7)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
 </div>
-<div id="section" class="section level1">
-<h1>2022</h1>
+<div id="asignación" class="section level3">
+<h3>Asignación</h3>
+<p>Permite asignar datos a variables.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-&gt;</td>
+<td>5 -&gt; x</td>
+</tr>
+<tr class="even">
+<td>&lt;-</td>
+<td>y &lt;- 7</td>
+</tr>
+<tr class="odd">
+<td>=</td>
+<td>z = 9</td>
+</tr>
+</tbody>
+</table>
+<p>Aunque podemos usar el signo igual para una asignación, no se
+recomienda su uso.</p>
+<pre class="r"><code>5 -&gt; x
+y &lt;- 7 
+z = 9
+x;y;z</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre><code>## [1] 9</code></pre>
+</div>
 </div>
 
 <p>Copyright &copy; 2022 Uptc, Escuela de Ingeniería de Sistemas y Computación.</p>

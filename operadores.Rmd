@@ -1,0 +1,112 @@
+---
+title: "Operadores"
+author: "jeol"
+date: "2022-08-15"
+output: html_document
+---
+
+Los operadores son los símbolos que le indican a R que debe realizar una tarea. Combinando datos y operadores es que logramos que R haga su trabajo.
+
+## Tipos de Operadores {.tabset}
+
+Existen operadores específicos para cada tipo de tarea. Los tipos de operadores principales son los siguientes:
+
+- Aritméticos
+- Relacionales
+- Lógicos
+- De asignación
+
+### Aritméticos
+
+En R tenemos los siguientes operadores aritméticos:
+
+| Operador | Operación               | Ejemplo | Resultado |
+|----------|-------------------------|---------|-----------|
+| +        | Suma                    | 6 + 8   | 14        |
+| -        | Resta                   | 6 - 1   | 5         |
+| *        | Multiplicación          | 5 * 4   | 20        |
+| /        | División                | 5 / 3   | 1.666667  |
+| ^        | Potencia                | 2 ^ 3   | 8         | 
+| %%       | Resto de División Entera| 5 %% 3  | 2         |
+| %/%      | Cociente Entero         | 5 %/% 3 | 1         |
+
+Es posible realizar operaciones aritméticas con datos de tipo entero y numérico.
+El uso de paréntesis permite definir prioridad de operaciones.
+
+Ejemplo:
+
+```{r}
+6 + 8
+6 - 1
+5 * 4
+5 / 3
+2^3
+5 %% 3
+5 %/% 3
+```
+
+### Relacionales
+
+Se usan para realizar comparaciones:
+
+| Operador | Operación             | Ejemplo   | Resultado |
+|----------|-----------------------|-----------------------|
+| <        | Mayor a               | 6 < 8     | TRUE      |
+| <=       | Menor o igual a       | 6 <= 1    | FALSE     |
+| >        | Mayor a               | 5 > 4     | TRUE      |
+| >=       | Mayor igual a         | 5 >= 3    | FALSE     |
+| ==       | Exactamente igual a   | 2 == 3    | FALSE     | 
+| !=       | Diferente a           | 5 != 3    | TRUE      |
+
+La comparación de cadenas tiene un comportamiento diferente que se abordará más adelante.
+
+Ejemplo:
+
+```{r}
+6 < 8
+6 <= 1
+5 > 4
+5 >= 3
+2 == 3
+5 != 3
+```
+
+### Lógicos
+
+Los operadores lógicos son usados para operaciones de álgebra Booleana, es decir, para describir relaciones lógicas, expresadas como verdadero (TRUE) o falso (FALSO).
+
+| Operador | Significado           | Ejemplo        | Resultado |
+|----------|-----------------------|----------------|-----------|
+| \|       | Or                    | TRUE \| FALSE  | TRUE      |
+| &        | And                   | TRUE & FALSE   | FALSE     |
+| !        | Not                   | !FALSE         | TRUE      |
+
+Estos operadores se pueden combinar para expresar relaciones complejas.
+
+Ejemplo:
+
+```{r}
+(6 < 8) | (13 > 7)
+(6 < 8) & (13 > 7)
+!(13 > 7)
+```
+
+### Asignación
+
+Permite asignar datos a variables.
+
+| Operador | Ejemplo    | 
+|----------|------------|
+| ->       | 5 -> x     | 
+| <-       | y <- 7     |
+| =        | z = 9      | 
+
+Aunque podemos usar el signo igual para una asignación, no se recomienda su uso.
+
+```{r}
+5 -> x
+y <- 7 
+z = 9
+x;y;z
+```
+

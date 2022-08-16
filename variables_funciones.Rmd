@@ -1,0 +1,23 @@
+---
+title: "Variables y Funciones"
+author: "jeol"
+date: "2022-08-16"
+output: html_document
+---
+
+- nombre_variable = valor: define una variable con dicho valor
+- nombre_funcion = function(variable) {funcion} : define la función
+
+Función para devolver un numero multiplicado por 2
+```{r}
+variable_numero <- 4
+multiplica_por_dos <- function(x) {2*x}
+multiplica_por_dos(variable_numero)
+```
+
+Función para elevar un numero al cuadrado
+
+```{r}
+eleva_al_cuadrado <- function(x) {x^2}
+eleva_al_cuadrado(variable_numero)
+```
